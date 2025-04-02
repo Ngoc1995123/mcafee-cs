@@ -19,42 +19,52 @@ body {
 header {
     background: #333;
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
-.logo img {
-    height: 50px;
-}
-
-nav ul {
-    list-style: none;
+.container {
     display: flex;
-    gap: 20px;
-    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.logo h2 {
+    font-size: 24px;
+    margin: 0;
 }
 
 .contact a {
+    display: inline-block;
+    background: transparent;
     color: white;
-    text-decoration: none;
+    border: 2px solid white;
+    padding: 10px 20px;
     font-size: 18px;
     font-weight: bold;
+    border-radius: 25px;
+    /* Bo tròn */
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
+/* Hiệu ứng hover */
+.contact a:hover {
+    background: white;
+    color: #333;
 }
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
 
 /* Product Section */
 .product-container {
